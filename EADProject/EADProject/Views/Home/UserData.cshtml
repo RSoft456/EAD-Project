@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BlogSpot/Home</title>
+    <style>
+        body {
+            color: #fff;
+            background: #19aa8d;
+            font-family: 'Roboto', sans-serif;
+        }
+        .table {
+            margin-left:auto;
+            margin-right:auto;
+            overflow-x:auto;
+            border:2px solid black;
+            width:40%;
+        }
+        .head{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 class="head">Welcome to Home Page</h2>
+        <table class="table">
+            <tr>
+                <th>UserName</th>
+                <th>Email</th>
+            </tr>
+            @foreach(var x in ViewBag.x){
+            <tr>
+                <td>@x.UserName</td>
+                <td>@x.Email</td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

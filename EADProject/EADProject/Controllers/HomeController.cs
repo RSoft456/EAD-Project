@@ -15,6 +15,7 @@ namespace EADProject.Controllers
             UserRepository user = new UserRepository();
             data = user.GetAllUsers();
             ViewBag.x = data;
+            ViewBag.page = "Home";
             return View();
         }
     }

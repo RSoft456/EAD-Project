@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +71,7 @@
                             <span class="fa fa-user"></span>
                         </span>
                     </div>
-                    <input type="text" class="form-control" name="UserName" placeholder="Username" required="required">
+                    <input type="text" class="form-control" asp-for="UserName"   placeholder="Username" required="required">
                 </div>
             </div>
             <div class="form-group">
@@ -85,7 +81,7 @@
                             <i class="fa fa-lock"></i>
                         </span>
                     </div>
-                    <input type="password" class="form-control" name="Password" placeholder="Password" required="required">
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Password" required="required">
                 </div>
             </div>
             <div class="form-group">
@@ -97,7 +93,7 @@
             </div>
             <center><p style="color: #19aa8d">@ViewBag.loginMessage</p></center>
         </form>
-        <p class="text-center small" style="color:white">Don't have an account! <a href="#" style="color:white;text-decoration:underline">Sign up here</a>.</p>
+        <p class="text-center small" style="color:white">Don't have an account! <a href="/User/SignUp" style="color:white;text-decoration:underline">Sign up here</a>.</p>
     </div>
 </body>
 </html>
